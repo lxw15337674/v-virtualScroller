@@ -2,8 +2,10 @@
     <div class="app">
         <h1>垂直滚动</h1>
         <div class="vertical">
-            <virtual-scroller :items="items" v-slot="{ index, size, active }">
-                <div>{{ index }}{{ size }} {{ active }}</div>
+            <virtual-scroller :items="items">
+                <template v-slot="{ index, size, active }">
+                    <div>{{ index }}{{ size }} {{ active }}</div>
+                </template>
             </virtual-scroller>
         </div>
         <h1>水平滚动</h1>
@@ -33,7 +35,7 @@
 import * as math from '@/utils/math.ts';
 export default {
     name: 'App',
-    data: function () {
+    data() {
         return {
             items: [],
         };

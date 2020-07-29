@@ -1,6 +1,6 @@
 <template>
     <div class="dynamicScroller" ref="scroller" @scroll.passive="handleScroll">
-        <slot name="before"></slot>
+        <!-- <slot name="before"></slot> -->
         <div class="wrapper" :style="tableSize">
             <div
                 v-for="row of rowsPool"
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <slot name="after"></slot>
+        <!-- <slot name="after"></slot> -->
     </div>
 </template>
 <script>

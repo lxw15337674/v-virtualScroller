@@ -5,7 +5,7 @@
         ref="scroller"
         @scroll.passive="handleScroll"
     >
-        <slot name="before"></slot>
+        <!-- <slot name="before"></slot> -->
         <div class="wrapper" ref="wrapper" :style="tableSize">
             <div
                 class="item-view"
@@ -21,7 +21,7 @@
                 <slot :size="view.item" :index="view.index" :active="view.used"></slot>
             </div>
         </div>
-        <slot name="before"></slot>
+        <!-- <slot name="after"></slot> -->
     </div>
 </template>
 <script>
