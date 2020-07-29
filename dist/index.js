@@ -664,8 +664,8 @@
     var plugin = {
       install: function install(Vue) {
         var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-        Vue.component("".concat(prefix, "virtualScroller"), __vue_component__);
-        Vue.component("".concat(prefix, "virtualScrollerTable"), __vue_component__$1);
+        Vue.component("".concat(prefix, "VirtualScroller"), __vue_component__);
+        Vue.component("".concat(prefix, "VirtualScrollerTable"), __vue_component__$1);
       }
     };
 

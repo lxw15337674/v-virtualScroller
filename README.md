@@ -11,18 +11,27 @@
 
 1. 安装插件
 
-   ```
-   npm install -s @lxw15337674/v-tip
+   ```shell
+   npm i v-virtual-scroller
    ```
 
 2. 注册为全局组件
 
+   ```javascript
+   import virtualScroller from 'v-virtual-scroller';
+   Vue.use(virtualScroller,'g'); //第二个参数为组件名前缀，选填。
    ```
-   import tip from '@lxw15337674/v-tip';
    
-   Vue.use(Vtip,{directiveName:'tip',theme:'dark'})
+或者引用
+   
+   ```javascript
+   import {virtualScroller,virtualScrollerTable} from 'v-virtual-scroller';
+   
+   export default {
+       name: 'App',
+       components: { virtualScroller，virtualScrollerTable },
+   }
    ```
-
 
 ## virtual-scroller
 

@@ -8293,12 +8293,12 @@
 
   const plugin = {
       install(Vue, prefix = '') {
-          Vue.component(`${prefix}virtualScroller`, __vue_component__$1);
-          Vue.component(`${prefix}virtualScrollerTable`, __vue_component__$2);
+          Vue.component(`${prefix}VirtualScroller`, __vue_component__$1);
+          Vue.component(`${prefix}VirtualScrollerTable`, __vue_component__$2);
       },
   };
 
-  Vue.use(plugin);
+  Vue.use(plugin,);
 
   Vue.config.productionTip = false;
   Vue.config.devtools = true;

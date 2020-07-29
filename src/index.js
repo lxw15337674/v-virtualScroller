@@ -6,8 +6,8 @@ export {
 }
 const plugin = {
     install(Vue, prefix = '') {
-        Vue.component(`${prefix}virtualScroller`, virtualScroller);
-        Vue.component(`${prefix}virtualScrollerTable`, virtualScrollerTable)
+        Vue.component(`${prefix}VirtualScroller`, virtualScroller);
+        Vue.component(`${prefix}VirtualScrollerTable`, virtualScrollerTable)
     },
 };
 export default plugin;
