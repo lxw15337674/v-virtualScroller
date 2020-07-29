@@ -1,4 +1,4 @@
-# v-virtualScroller
+# v-virtual-scroller
 
 基于vue的虚拟滚动组件
 
@@ -22,7 +22,7 @@
    Vue.use(virtualScroller,'g'); //第二个参数为组件名前缀，选填。
    ```
    
-或者引用
+或者按需引用
    
    ```javascript
    import {virtualScroller,virtualScrollerTable} from 'v-virtual-scroller';
@@ -115,6 +115,5 @@ export default {
 | height   | 元素高度           | number  |
 | width    | 元素宽度           | number  |
 | active   | 元素激活状态       | Boolean |
-
 
 
