@@ -8292,10 +8292,9 @@
     );
 
   const plugin = {
-      install(Vue, options) {
-          const finalOptions = Object.assign({ refix: '', options });
-          Vue.component(`${finalOptions.refix}virtualScroller`, __vue_component__$1);
-          Vue.component(`${finalOptions.refix}virtualScrollerTable`, __vue_component__$2);
+      install(Vue, prefix = '') {
+          Vue.component(`${prefix}virtualScroller`, __vue_component__$1);
+          Vue.component(`${prefix}virtualScrollerTable`, __vue_component__$2);
       },
   };
 
