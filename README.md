@@ -116,4 +116,9 @@ export default {
 | width    | 元素宽度           | number  |
 | active   | 元素激活状态       | Boolean |
 
+## 参考
+
+[再谈前端虚拟列表的实现](https://zhuanlan.zhihu.com/p/34585166)
+
+[无尽滚动的复杂度 -- 来自 Google 大神的拆解](https://juejin.im/post/58a3c81e128fe10058c57a8b#heading-1 )
 
