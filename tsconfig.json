@@ -24,6 +24,6 @@
     "paths": {
         "@/*": ["src/*"]
     },
-    "include": ["**/*.ts", "src/index.js"],
+    "include": ["**/*.ts"],
     "exclude": ["node_modules"]
 }
