@@ -5,7 +5,7 @@
         ref="scroller"
         @scroll.passive="handleScroll"
     >
-        <!-- <slot name="before"></slot> -->
+        <slot name="before"></slot>
         <div class="wrapper" ref="wrapper" :style="tableSize">
             <div
                 class="item-view"
