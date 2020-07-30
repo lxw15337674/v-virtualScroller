@@ -1,6 +1,7 @@
-export default plugin;
-declare namespace plugin {
-    export function install(Vue: any, prefix?: string): void;
-    export function install(Vue: any, prefix?: string): void;
-}
-export { virtualScroller, virtualScrollerTable };
+import debounce from './debounce';
+import merge from './merge';
+declare const _default: {
+    debounce: typeof debounce;
+    merge: typeof merge;
+};
+export default _default;
