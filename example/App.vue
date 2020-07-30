@@ -2,7 +2,7 @@
     <div class="app">
         <h1>垂直滚动</h1>
         <div class="vertical">
-            <virtual-scroller :items="items">
+            <virtual-scroller :items="items" @scroll="scrollHandle">
                 <template v-slot="{ index, size, active }">
                     <div>{{ index }}{{ size }} {{ active }}</div>
                 </template>
@@ -40,7 +40,11 @@ export default {
             items: [],
         };
     },
-    methods: {},
+    methods: {
+        scrollHandle(offset) {
+            console.log(offset);
+        },
+    },
     mounted() {
         for (let i = 0; i < 1000; i++) {
             this.items.push(math.random(50, 200));

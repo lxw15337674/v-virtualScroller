@@ -91,19 +91,24 @@ export default {
             }
         },
         handleScroll() {
+            let offset;
             if (this.direction === 'vertical') {
-                this.handleVisibilityChange(
-                    this.$refs.scroller.scrollTop,
-                    this.$refs.scroller.clientHeight,
-                );
+                offset = this.$refs.scroller.scrollTop;
             } else {
-                this.handleVisibilityChange(
-                    this.$refs.scroller.scrollLeft,
-                    this.$refs.scroller.clientWidth,
-                );
+                offset = this.$refs.scroller.scrollLeft;
             }
+            this.$emit('scroll', offset);
+            this.handleVisibilityChange();
         },
-        handleVisibilityChange(offset, clientSize) {
+        handleVisibilityChange() {
+            let offset, clientSize;
+            if (this.direction === 'vertical') {
+                offset = this.$refs.scroller.scrollTop;
+                clientSize = this.$refs.scroller.clientHeight;
+            } else {
+                offset = this.$refs.scroller.scrollLeft;
+                clientSize = this.$refs.scroller.clientWidth;
+            }
             let { start, end } = scroll.findVisibleIndex(offset, clientSize, this.itemsPosition);
             this.visibleIndex.start = start;
             this.visibleIndex.end = end;
@@ -114,7 +119,7 @@ export default {
         items: {
             deep: true,
             handler() {
-                this.handleScroll();
+                this.handleVisibilityChange();
             },
         },
     },
@@ -142,10 +147,10 @@ export default {
         },
     },
     mounted() {
-        window.addEventListener('resize', this.handleScroll);
+        window.addEventListener('resize', this.handleVisibilityChange);
     },
     beforeDestroy() {
-        window.removeEventListener('resize', this.handleScroll);
+        window.removeEventListener('resize', this.handleVisibilityChange);
     },
 };
 </script>

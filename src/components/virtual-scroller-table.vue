@@ -117,6 +117,11 @@ export default {
         },
         handleScroll() {
             let scroller = this.$refs.scroller;
+            this.$emit('scroll', { left: scroller.scrollLeft, top: scroller.scrollTop });
+            this.handleVisibilityChange();
+        },
+        handleVisibilityChange() {
+            let scroller = this.$refs.scroller;
             this.visibleRowsIndex = scroll.findVisibleIndex(
                 scroller.scrollTop,
                 scroller.clientHeight,
@@ -127,7 +132,6 @@ export default {
                 scroller.clientWidth,
                 this.colsPosition,
             );
-            this.$emit('scroll', { left: scroller.scrollLeft, top: scroller.scrollTop });
         },
     },
 
@@ -147,13 +151,13 @@ export default {
         rows: {
             deep: true,
             handler() {
-                this.handleScroll();
+                this.handleVisibilityChange();
             },
         },
         cols: {
             deep: true,
             handler() {
-                this.handleScroll();
+                this.handleVisibilityChange();
             },
         },
     },
@@ -182,10 +186,10 @@ export default {
         },
     },
     mounted() {
-        window.addEventListener('resize', this.handleScroll);
+        window.addEventListener('resize', this.handleVisibilityChange);
     },
     beforeDestroy() {
-        window.removeEventListener('resize', this.handleScroll);
+        window.removeEventListener('resize', this.handleVisibilityChange);
     },
 };
 </script>
