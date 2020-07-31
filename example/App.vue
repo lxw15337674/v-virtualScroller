@@ -46,12 +46,16 @@ export default {
             console.log(offset);
         },
         addData() {
-            for (let i = 0; i < 1000; i++) {
-                this.items.push(math.random(50, 200));
-            }
+            // for (let i = 0; i < 1000; i++) {
+            //     this.items.push(math.random(50, 200));
+            // }
         },
     },
-    mounted() {},
+    mounted() {
+        for (let i = 0; i < 1000; i++) {
+            this.items.push(math.random(50, 200));
+        }
+    },
 };
 </script>
 
