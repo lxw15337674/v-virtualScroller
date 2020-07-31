@@ -149,7 +149,6 @@ export default {
         table: {
             deep: true,
             handler() {
-                console.log('test');
                 this.handleVisibilityChange();
             },
         },
