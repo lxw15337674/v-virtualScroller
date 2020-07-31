@@ -146,20 +146,18 @@ export default {
                 this.updateVisibleItems('horizontal');
             },
         },
-        rows: {
+        table: {
             deep: true,
             handler() {
-                this.handleVisibilityChange();
-            },
-        },
-        cols: {
-            deep: true,
-            handler() {
+                console.log('test');
                 this.handleVisibilityChange();
             },
         },
     },
     computed: {
+        table() {
+            return { cols: this.cols, rows: this.rows };
+        },
         tableSize() {
             return {
                 height: `${math.total(this.rows, 0, -1)}px`,

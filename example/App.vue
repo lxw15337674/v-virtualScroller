@@ -1,5 +1,6 @@
 <template>
     <div class="app">
+        <button @click="addData">填充数据</button>
         <h1>垂直滚动</h1>
         <div class="vertical">
             <virtual-scroller :items="items" @scroll="scrollHandle">
@@ -44,12 +45,13 @@ export default {
         scrollHandle(offset) {
             console.log(offset);
         },
+        addData() {
+            for (let i = 0; i < 1000; i++) {
+                this.items.push(math.random(50, 200));
+            }
+        },
     },
-    mounted() {
-        for (let i = 0; i < 1000; i++) {
-            this.items.push(math.random(50, 200));
-        }
-    },
+    mounted() {},
 };
 </script>
 
