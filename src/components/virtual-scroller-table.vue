@@ -84,10 +84,8 @@ export default {
             return view;
         },
         unusedView(view) {
-            view.item = undefined;
             view.used = false;
             view.position = -9999;
-            view.index = -1;
         },
         updateVisibleItems(direction) {
             let start, end, pool, itemPosition, items;
