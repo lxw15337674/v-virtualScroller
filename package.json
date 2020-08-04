@@ -5,7 +5,6 @@
     "author": "bhwa233 <404174262@qq.com>",
     "public": true,
     "main": "dist/index.js",
-    "module": "/src/index.js",
     "keywords": [
         "vue",
         "virtualScroll"
