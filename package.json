@@ -39,7 +39,7 @@
         "rollup-plugin-serve": "^1.0.3",
         "rollup-plugin-styles": "^3.10.0",
         "rollup-plugin-typescript2": "^0.27.1",
-        "rollup-plugin-vue": "^5.1.6",
+        "rollup-plugin-vue": "^6.0.0",
         "typescript": "^3.9.7",
         "vue-template-compiler": "^2.6.11"
     },
